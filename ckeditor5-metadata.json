@@ -1,0 +1,17 @@
+{
+	"plugins": [
+		{
+			"name": "Spoiler",
+			"className": "Spoiler",
+			"description": "Adds spoiler to the editor.",
+			"path": "src/spoiler.js",
+			"uiComponents": [
+				{
+					"name": "spoiler",
+					"type": "Button",
+					"iconPath": "theme/icons/spoiler.svg"
+				}
+			]
+		}
+	]
+}
