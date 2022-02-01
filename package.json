@@ -1,6 +1,6 @@
 {
   "name": "@vndywhat/ckeditor5-spoiler",
-  "version": "18.0.0",
+  "version": "18.0.1",
   "description": "Spoiler plugin for CKEditor5",
   "main": "src/index.js",
   "scripts": {

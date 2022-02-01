@@ -70,14 +70,14 @@ export default class SpoilerEditing extends Plugin {
 			model: 'spoilerTitle',
 			view: {
 				name: 'div',
-				classes: 'spoiler-title hide-icon'
+				classes: [ 'spoiler-title', 'hide-icon' ]
 			}
 		} );
 		conversion.for( 'dataDowncast' ).elementToElement( {
 			model: 'spoilerTitle',
 			view: {
 				name: 'div',
-				classes: 'spoiler-title hide-icon'
+				classes: [ 'spoiler-title', 'hide-icon' ]
 			}
 		} );
 		conversion.for( 'editingDowncast' ).elementToElement( {
