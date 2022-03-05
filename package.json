@@ -1,12 +1,13 @@
 {
   "name": "@vndywhat/ckeditor5-spoiler",
-  "version": "18.0.1",
+  "version": "18.0.2",
   "description": "Spoiler plugin for CKEditor5",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint --quiet '**/*.js'",
     "stylelint": "stylelint --quiet --allow-empty-input 'theme/**/*.css' 'docs/**/*.css'",
-    "dll:build": "webpack --mode=production"
+    "dll:build": "webpack --mode=production",
+    "dll:dev": "webpack --watch --mode=development"
   },
   "keywords": [
     "ckeditor5",

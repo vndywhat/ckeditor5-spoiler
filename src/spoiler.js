@@ -17,9 +17,17 @@ export default class Spoiler extends Plugin {
 			const element = data.domTarget;
 			const isSpoilerTitle = element.classList.contains( 'spoiler-title' );
 			if ( data.target.name === 'div' && isSpoilerTitle ) {
-				element.classList.toggle( 'hide-icon' );
-				element.classList.toggle( 'show-icon' );
-				element.parentElement.querySelector( '.spoiler-content' ).classList.toggle( 'hidden' );
+				const spoilerContent = element.parentElement.querySelector( '.spoiler-content' );
+				spoilerContent.classList.toggle( 'hidden' );
+
+				if ( spoilerContent.classList.contains( 'hidden' ) ) {
+					element.classList.toggle( 'show-icon', true );
+					element.classList.toggle( 'hide-icon', false );
+				} else {
+					element.classList.toggle( 'show-icon', false );
+					element.classList.toggle( 'hide-icon', true );
+				}
+
 			}
 		} );
 	}

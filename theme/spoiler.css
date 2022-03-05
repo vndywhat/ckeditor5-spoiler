@@ -1,10 +1,14 @@
 /* spoiler */
 div.spoiler {
+	display: flex;
+	flex-direction: column;
 	padding: 5px;
-	line-height: 1.6;
 }
 
 div.spoiler div.spoiler-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	color: #000000;
 	font-size: 12px;
 	font-weight: bold;
@@ -45,27 +49,25 @@ div.spoiler div.spoiler-title {
 	position: relative;
 }
 
-div.spoiler div.spoiler-title.hide-icon::before,
-div.spoiler div.spoiler-title.show-icon::before {
-	display: inline-block;
-	width: 11px;
-	height: 11px;
-	margin-left: 4px;
-	margin-right: 6px;
-	cursor: pointer;
+div.spoiler div.spoiler-title.hide-icon::after,
+div.spoiler div.spoiler-title.show-icon::after {
+	display: inline-flex;
+	content: ' ';
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
 	-webkit-user-modify: read-only;
-	border: 0.5px solid #4e4e4e;
-	border-radius: 50%;
-	text-align: center;
-	font-size: 8px;
+	justify-content: center;
+	transition: 0.3s linear;
 }
 
-div.spoiler div.spoiler-title.hide-icon::before {
-	content: "-";
+div.spoiler div.spoiler-title.hide-icon::after {
+	background-image: url('../theme/icons/triangle.svg');
+	transform: rotate(180deg);
 }
 
-div.spoiler div.spoiler-title.show-icon::before {
-	content: "+";
+div.spoiler div.spoiler-title.show-icon::after {
+	background-image: url('../theme/icons/triangle.svg');
 }
 
 div.spoiler div.spoiler-content {
